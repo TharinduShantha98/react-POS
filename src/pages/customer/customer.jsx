@@ -63,7 +63,7 @@ class Customer extends Component{
 
                 >
                     <Box fontStyle="italic" m={1}>
-                        Customer  Management System
+                        Customer  Management
                     </Box>
 
 
