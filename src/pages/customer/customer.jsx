@@ -12,6 +12,16 @@ import FormLabel from "@material-ui/core/FormLabel";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
+import TableContainer from "@material-ui/core/TableContainer";
+import Table from "@material-ui/core/Table";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import TableCell from "@material-ui/core/TableCell";
+import TableBody from "@material-ui/core/TableBody";
+import Tooltip from "@material-ui/core/Tooltip";
+import IconButton from "@material-ui/core/IconButton";
+import UpdateIcon from '@material-ui/icons/Update';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 class Customer extends Component{
 
@@ -27,6 +37,23 @@ class Customer extends Component{
 
     render() {
         let {classes} = this.props
+
+        function createData(id, name, email,gender,status,action) {
+            return { id, name, email, gender, status,action };
+        }
+
+        const rows = [
+            createData('1',
+                'tharindu',
+                'thari@gmail.com',
+                'Male',
+                'active',
+            ),
+
+        ];
+
+
+
         return(
             <div className={classes.container}>
                 <Typography
@@ -177,21 +204,69 @@ class Customer extends Component{
                         </Popup>
 
 
+                    </div>
+                    <div className={classes.tableContainer_table}>
+                        <TableContainer component={Paper}>
+                            <Table className={classes.table} aria-label="simple table">
+                                <TableHead style={{backgroundColor:"#212342",
 
+                                }}>
+                                    <TableRow>
+                                        <TableCell style={{color:"#f5f5f5", fontWeight:"bold"}}>Id</TableCell>
+                                        <TableCell style={{color:"#f5f5f5", fontWeight:"bold"}}align="center">Name</TableCell>
+                                        <TableCell style={{color:"#f5f5f5", fontWeight:"bold"}} align="center">@Email</TableCell>
+                                        <TableCell style={{color:"#f5f5f5", fontWeight:"bold"}}align="center">Gender</TableCell>
+                                        <TableCell style={{color:"#f5f5f5", fontWeight:"bold"}}align="center">Status</TableCell>
+                                        <TableCell style={{color:"#f5f5f5", fontWeight:"bold"}}align="center">Action</TableCell>
 
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {rows.map((row) => (
+                                        <TableRow key={row.name}>
+                                            <TableCell component="th" scope="row">
+                                                {row.id}
+                                            </TableCell>
+                                            <TableCell align="center">{row.name}</TableCell>
+                                            <TableCell align="center">{row.email}</TableCell>
+                                            <TableCell align="center">{row.gender}</TableCell>
+                                            <TableCell align="center">{row.status}</TableCell>
+                                            <TableCell align="center" >
+                                                <Tooltip title="Edit">
+                                                    <IconButton
+                                                        onClick={() => {
+                                                            console.log("edit icon clicked!")
+                                                            //this.updateCustomer(row);
+                                                        }}
+                                                    >
+                                                        <UpdateIcon color="primary" />
+                                                    </IconButton>
+                                                </Tooltip>
+                                                <Tooltip title="Delete">
+                                                    <IconButton
+                                                        onClick={() => {
+                                                            // this.deleteCustomer(row.id)
+                                                        }}
+                                                    >
+                                                        <DeleteIcon color="error" />
+                                                    </IconButton>
+                                                </Tooltip>
+                                            </TableCell>
 
-
-
-
-
-
-
-
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
                     </div>
 
 
 
+
                 </div>
+
+
+
 
 
 
