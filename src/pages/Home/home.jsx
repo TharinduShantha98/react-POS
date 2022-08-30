@@ -70,7 +70,7 @@ class Home extends Component{
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        Lizard
+                                        customer
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
                                         Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -83,7 +83,7 @@ class Home extends Component{
                                     Share
                                 </Button>
                                 <Button size="small" color="primary">
-                                    Learn More
+                                   go to customer page
                                 </Button>
                             </CardActions>
                         </Card>
@@ -99,7 +99,7 @@ class Home extends Component{
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        Lizard
+                                        item
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
                                         Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -112,7 +112,7 @@ class Home extends Component{
                                     Share
                                 </Button>
                                 <Button size="small" color="primary">
-                                    Learn More
+                                   go to item page
                                 </Button>
                             </CardActions>
                         </Card>
@@ -128,7 +128,7 @@ class Home extends Component{
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        Lizard
+                                        order
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
                                         Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -141,7 +141,7 @@ class Home extends Component{
                                     Share
                                 </Button>
                                 <Button size="small" color="primary">
-                                    Learn More
+                                     go to order Page
                                 </Button>
                             </CardActions>
                         </Card>
