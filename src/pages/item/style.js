@@ -55,7 +55,7 @@ export const styleSheet={
     },
     modelOne:{
         width:"50vw",
-        height:"50vh",
+        height:"70vh",
         backgroundColor:"#feffff",
         display:"flex",
         alignItems:"center",
